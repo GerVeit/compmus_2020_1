@@ -27,10 +27,19 @@ int main(int c, char** argv)
     float* left = (float*) malloc(buffer_len/2*sizeof(float));
 
     cout << "copying stereo into two mono..." << endl;
+    cout << "left" << endl;
     for (int i=0; i<buffer_len; i+=2)
     {
-        // TODO
+        cout << audio_buffer[i] << " ";
     }
+    cout << endl;
+
+    cout << "right" << endl;
+    for (int i=1; i<buffer_len; i+=2)
+    {
+        cout << audio_buffer[i] << " ";
+    }
+    cout << endl;
 
     cout << "done." << endl;
     return 0;
